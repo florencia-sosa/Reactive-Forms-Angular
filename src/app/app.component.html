@@ -1,54 +1,55 @@
 <div class="bg">
-  <div class="row">
-    <div class="col-sm-12 col-md-6">
-      <div class="container-text">
-        <p>Learn to code by watching others</p>
-        <p>See how experienced developers solve problems in real-time.
-          Watching scripted tutorial is great, but understanding how developers think is invaluable.</p>
+  <div class="container-wrapper">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 ">
+        <div class="container-text">
+          <p>Learn to code by watching others</p>
+          <p>See how experienced developers solve problems in real-time.
+            Watching scripted tutorial is great, but understanding how developers think is invaluable.</p>
+        </div>
       </div>
-    </div>
-    <div class="col-sm-12 col-md-6 d-flex align-self-center align-items-center flex-column">
-      <div class="card-offer col-8 d-flex align-self-center align-items-center flex-column">
-        <p>Try it free 7 days then</p>
-        <p>$20/mo. thereafther</p>
-      </div>
-      <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="card-form d-flex flex-column col-8">
-        <div class="my-2">
-          <label class="form-label">First Name</label>
-          <input formControlName="firstName" type="text" class="form-control" placeholder="Juan">
-          <div class="alert alert-danger my-2"
-            *ngIf="registrationForm.controls['firstName'].errors && registrationForm.controls['firstName'].touched">
-            First name is required.
+      <div class="col-sm-12 col-md-6 d-flex align-self-center align-items-center flex-column">
+        <div class="card-offer col-8 d-flex align-self-center align-items-center flex-column">
+          <p>Try it free 7 days then</p>
+          <p>$20/mo. thereafther</p>
+        </div>
+        <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="card-form d-flex flex-column col-8">
+          <div class="my-2">
+            <label class="form-label">First Name</label>
+            <input formControlName="firstName" type="text" class="form-control" placeholder="Juan">
+            <div class="alert alert-danger my-2"
+              *ngIf="registrationForm.controls['firstName'].errors && registrationForm.controls['firstName'].dirty">
+              First name is required.
+            </div>
           </div>
-        </div>
-        <div class="my-2">
-          <label class="form-label">Last Name</label>
-          <input formControlName="lastName" type="text" class="form-control" placeholder="Peréz">
-          <div class="alert alert-danger my-2"
-            *ngIf="registrationForm.controls['lastName'].errors && registrationForm.controls['lastName'].touched">
-            Last name is required.
+          <div class="my-2">
+            <label class="form-label">Last Name</label>
+            <input formControlName="lastName" type="text" class="form-control" placeholder="Peréz">
+            <div class="alert alert-danger my-2"
+              *ngIf="registrationForm.controls['lastName'].errors && registrationForm.controls['lastName'].dirty">
+              Last name is required.
+            </div>
           </div>
-        </div>
-        <div class="my-2">
-          <label class="form-label">Email </label>
-          <input formControlName="email" type="email" class="form-control" placeholder="name@example.com">
-          <div class="alert alert-danger my-2" 
-          *ngIf="registrationForm.controls['email'].errors &&
-        (registrationForm.controls['email'].touched || registrationForm.controls['email'].dirty)"> The format is wrong. </div>
-        </div>
-        <div class="my-2">
-          <label class="form-label">Password</label>
-          <input formControlName="password" type="password" class="form-control">
-          <div class="alert alert-danger my-2"
-            *ngIf="registrationForm.controls['password'].errors && registrationForm.controls['password'].touched">
-            Password is required.
+          <div class="my-2">
+            <label class="form-label">Email </label>
+            <input formControlName="email" type="email" class="form-control" placeholder="name@example.com">
+            <div class="alert alert-danger my-2" *ngIf="registrationForm.controls['email'].errors &&
+        registrationForm.controls['email'].dirty"> The format is wrong. </div>
           </div>
-        </div>
+          <div class="my-2">
+            <label class="form-label">Password</label>
+            <input formControlName="password" type="password" class="form-control">
+            <div class="alert alert-danger my-2"
+              *ngIf="registrationForm.controls['password'].errors && registrationForm.controls['password'].dirty">
+              Password is required.
+            </div>
+          </div>
 
-        <button class="btn btn-success my-2" [disabled]="registrationForm.invalid && registrationForm.dirty "
-          type="submit">CLAIM YOUR FREE TRIAL</button>
-        <span>By clicking the button,you are agreeing to our <a>Terms And Services</a></span>
-      </form>
+          <button class="btn btn-success my-2" [disabled]="registrationForm.invalid" type="submit">CLAIM YOUR FREE
+            TRIAL</button>
+          <span>By clicking the button,you are agreeing to our <a>Terms And Services</a></span>
+        </form>
+      </div>
     </div>
   </div>
 </div>

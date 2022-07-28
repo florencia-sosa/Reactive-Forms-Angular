@@ -31,6 +31,7 @@ export class AppComponent implements OnInit {
     let notificacion = `Te has registrado éxitosamente ${firtName} ${lastName}.
    A continuación de llegará un email a ${email}`
     alert(notificacion)
+    console.log('a')
   }
 }
 

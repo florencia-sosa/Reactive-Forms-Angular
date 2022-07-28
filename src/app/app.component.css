@@ -1,13 +1,21 @@
+
 .bg {
   width: 100%;
   height: 100vh;
   background-image: url("../assets/img/bg-intro-desktop.png");
 }
 
+.container-wrapper{
+ display: flex;
+ align-items: center; 
+ justify-content: center;
+ height: 100%;
+ width: 100%;
+}
 @media (min-width: 768px) {
-  .container-text {
+  /* .container-text {
     height: 100vh;
-  }
+  } */
   .container-text > p {
     text-align: justify;
   }
